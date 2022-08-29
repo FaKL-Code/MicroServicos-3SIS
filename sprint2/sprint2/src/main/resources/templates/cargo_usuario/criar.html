@@ -1,0 +1,36 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<meta charset="utf-8"/>
+		<title>Optimus Prime | Cargos de usuários</title>
+	</head>
+	
+	<body>
+		<h1>Optimus Prime</h1>
+		
+		<hr/>
+		
+		<h2>Criação de cargos de usuários</h2>
+		<small>Crie um cargo de usuário na empresa</small>
+		
+		<hr/>
+	
+		<form action="#" th:action="@{/cargos/criar}" method="POST" th:object="${cargo}">
+			<label>ID</label>
+			<input type="text" th:field="*{id}"/><br/>
+			
+			<label>Nome</label>
+			<input type="text" th:field="*{nome}"/><br/>
+			
+			<label>Descrição</label>
+			<input type="text" th:field="*{descricao}"/><br/>
+			
+			<label>Nível</label>
+			<input type="text" th:field="*{nivel}"/><br/>
+			
+			<input type="submit" value="Criar" />
+		</form>
+	</body>
+</html>

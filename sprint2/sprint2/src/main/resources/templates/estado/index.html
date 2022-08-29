@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Optimus Prime | Estados</title>
+	</head>
+	
+	<body>
+		<h1>Optimus Prime</h1>
+		
+		<hr/>
+		
+		<h2>Listagem de estados</h2>
+		<small>Todos os estados em que o aplicativo funciona</small>
+		
+		<hr/>
+		
+		<table>
+			<tr>
+				<th>Estado</th>
+				<th>País</th>
+			</tr>
+			
+			<tr th:each="estado: ${estados}">
+				<td th:text="${estado.getNome()}"></td>
+				<td th:text="${estado.getPais().getNome()}"></td>
+			</tr>
+		</table>
+	</body>
+	
+</html>
